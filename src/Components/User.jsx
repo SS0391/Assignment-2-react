@@ -16,6 +16,28 @@ export default function User() {
     e.preventDefault();
     if (!userName.trim() || !email.trim()) {
       alert("Please be kind an type in both username and email adress");
+      return;
     }
+
+    const newUser = { userName, email };
+    setUserList([...userList, newUser]);
+
+    setUserName("");
+    setEmail("");
   };
+
+  return (
+    <div>
+      <h2>Users</h2>
+
+      <h3>Registreted users:</h3>
+      <ul>
+        {userList.map((user, index) => (
+          <li key={index}>
+            {user.username} {user.email}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }

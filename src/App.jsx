@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import CookieClicker from "./Components/CookieClicker.jsx";
 import CatFacts from "./Components/CatFacts.jsx";
+import User from "./Components/User.jsx";
+
 function App() {
   return (
     <div>
@@ -11,6 +13,9 @@ function App() {
       </div>
       <div>
         <CatFacts />
+      </div>
+      <div>
+        <User />
       </div>
     </div>
   );
