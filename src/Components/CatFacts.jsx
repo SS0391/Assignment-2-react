@@ -28,6 +28,14 @@ export default function CatFacts() {
       <h2>Funny and random CatFacts</h2>
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
+
+      {!loading && !error && (
+        <ul>
+          {facts.map((item, index) => (
+            <li key={index}>{item.fact}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
