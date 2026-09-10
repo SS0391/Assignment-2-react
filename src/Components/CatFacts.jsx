@@ -6,21 +6,23 @@ export default function CatFacts() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://catfact.ninja/facts?limit=5")
-      .then((response) => {
+    const getCatFacts = async () => {
+      try {
+        const response = await fetch("https://catfact.ninja/facts");
+
         if (!response.ok) {
-          throw new Error("Can't fetch cat facts");
+          throw new Error("Can't find any cat facts");
         }
-        return response.json();
-      })
-      .then((data) => {
+        const data = await response.json();
         setFacts(data.data);
-        setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         setError(err.message);
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+
+    getCatFacts();
   }, []);
 
   return (
