@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CookieClicker = () => {
+export default function CookieClicker() {
   const [points, setPoints] = useState(0);
 
   return (
@@ -12,6 +12,4 @@ const CookieClicker = () => {
       </button>
     </div>
   );
-};
-
-export default CookieClicker;
+}
