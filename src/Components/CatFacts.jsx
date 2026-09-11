@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./CatFacts.module.css";
 
 export default function CatFacts() {
   const [facts, setFacts] = useState([]);
@@ -26,15 +27,17 @@ export default function CatFacts() {
   }, []);
 
   return (
-    <div>
-      <h2>Funny and random CatFacts</h2>
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
+    <div className={styles.card}>
+      <h2 className={styles.title}>Funny and random CatFacts</h2>
+      {loading && <p className={styles.loading}>Loading...</p>}
+      {error && <p className={styles.error}>Error: {error}</p>}
 
       {!loading && !error && (
-        <ul>
+        <ul className={styles.list}>
           {facts.map((item, index) => (
-            <li key={index}>{item.fact}</li>
+            <li key={index} className={styles.listItem}>
+              {item.fact}
+            </li>
           ))}
         </ul>
       )}

@@ -12,8 +12,13 @@ body {
   padding: 40px 20px;
 }
 
+button img {
+  width: 100px;
+  height: 100px;
+}
+
 h1 {
   text-align: center;
   color: #1a1a1a;
-  margin-bottom: 35px;
+  margin-bottom: 3px;
 }
