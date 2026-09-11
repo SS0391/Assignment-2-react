@@ -20,7 +20,7 @@ export default function User() {
     }
 
     const newUser = { userName, email };
-    setUserList([...userList, newUser]);
+    setUserList((prevUserList) => [...prevUserList, newUser]);
 
     setUserName("");
     setEmail("");
@@ -38,6 +38,19 @@ export default function User() {
           </li>
         ))}
       </ul>
+
+      <h3>Add a new user:</h3>
+      <form onSubmit={handleAddedUser}>
+        <div>
+          <label>Username</label>
+          <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} placeholder="John Smith" />
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="john@smith.com" />
+        </div>
+        <button>Add User</button>
+      </form>
     </div>
   );
 }
