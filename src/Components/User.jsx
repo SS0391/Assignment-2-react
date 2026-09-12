@@ -8,11 +8,13 @@ const mockData = [
 ];
 
 export default function User() {
+  // Holds the objects from the mockdata array, and updates it when a new user is added
   const [userList, setUserList] = useState(mockData);
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
 
   const handleAddedUser = (e) => {
+    // preventDefault prevents the browser from refresing on form submit
     e.preventDefault();
     if (!userName.trim() || !email.trim()) {
       alert("Please be kind an type in both username and email adress");
@@ -22,6 +24,7 @@ export default function User() {
     const newUser = { userName, email };
     setUserList((prevUserList) => [...prevUserList, newUser]);
 
+    // Resets the forms input back to empty fields
     setUserName("");
     setEmail("");
   };

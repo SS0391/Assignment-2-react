@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import styles from "./CatFacts.module.css";
 
 export default function CatFacts() {
+  // 3 seperate states to manage data, loading screens and error
   const [facts, setFacts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // only runs one time, when the component mounts because off -> empty dependency array[]
   useEffect(() => {
     const getCatFacts = async () => {
       try {
