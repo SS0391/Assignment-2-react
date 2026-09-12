@@ -10,7 +10,7 @@ export default function CookieClicker() {
       <h2>The Cookie Clicker!</h2>
       <p className={styles.counter}>Points: {points}</p>
 
-      {/**/}
+      {/*using functional update format (prevPoints) to safely update points*/}
       <button className={styles.cookieBtn} onClick={() => setPoints((prevPoints) => prevPoints + 1)}>
         <img src="/cookie-1.png" alt="Image of a cookie" className={styles.cookieImg} />
       </button>

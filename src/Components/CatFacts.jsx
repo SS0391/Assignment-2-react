@@ -13,6 +13,7 @@ export default function CatFacts() {
       try {
         const response = await fetch("https://catfact.ninja/facts");
 
+        // check if the fetch don`t throw an error
         if (!response.ok) {
           throw new Error("Can't find any cat facts");
         }
@@ -20,6 +21,7 @@ export default function CatFacts() {
         setFacts(data.data);
       } catch (err) {
         setError(err.message);
+        // finally runs the code regardless of it succeded or failed
       } finally {
         setLoading(false);
       }
