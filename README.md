@@ -1,16 +1,47 @@
-# React + Vite
+# React Oppgave 2: useEffect() og useEffect()
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Built with **Vite** for practicing of core React
 
-Currently, two official plugins are available:
+## Features and Components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **CookieClicker** Simple button that is interactive, when you click it the number rises. it uses functional state update (`prevPoints`) to give the user an accurate counter
+- **CatFacts** Fetches random cat facts from an external API (`https://catfact.ninja`) used useEffect to mount it only once per rendering
+- **User** Displays a list of members initialized from a fixed `mockdata` array where new user can be appended through controlled form inputs
 
-## React Compiler
+## Techs used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React**
+- **Vite**
+- **Javascript**
+- **CSS modules**
 
-## Expanding the ESLint configuration
+## How to Run the Project Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation Steps
+
+1. Clone this repository from GitHub:
+
+   ```bash
+   git clone https://github.com/SS0391/Assignment-2-react.git
+   ```
+
+2. Navigate into the project directory:
+
+   ```bash
+   cd Assignment-2-react
+   ```
+
+3. Install all necessary dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the local development server:
+   ```bash
+   npm run dev
+   ```
+
+### Made for learning experience
+
+- Sverre [SS0391]
