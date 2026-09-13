@@ -12,7 +12,7 @@ export default function CookieClicker() {
 
       {/*using functional update format (prevPoints) to safely update points*/}
       <button className={styles.cookieBtn} onClick={() => setPoints((prevPoints) => prevPoints + 1)}>
-        <img src="/cookie-1.png" alt="Image of a cookie" className={styles.cookieImg} />
+        <img src={`${import.meta.env.BASE_URL}cookie-1.png`} alt="Image of a cookie" className={styles.cookieImg} />
       </button>
     </div>
   );
