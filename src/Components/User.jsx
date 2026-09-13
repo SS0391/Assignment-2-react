@@ -21,7 +21,7 @@ export default function User() {
       return;
     }
 
-    const newUser = { userName, email };
+    const newUser = { username: userName, email: email };
     setUserList((prevUserList) => [...prevUserList, newUser]);
 
     // Resets the forms input back to empty fields
@@ -33,7 +33,7 @@ export default function User() {
     <div className={styles.card}>
       <h2>Users</h2>
 
-      <h3>Registreted users:</h3>
+      <h3>Registered users:</h3>
       <ul className={styles.list}>
         {userList.map((user, index) => (
           <li key={index} className={styles.listItem}>
